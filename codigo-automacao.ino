@@ -16,7 +16,7 @@ void setup()
 
 Serial.print("Conectando");//informando estado atual (debug)
 //Conexão do microcontrolador com a rede Wi-Fi disponível do local onde será usado.
-WiFi.begin("veni-vidi-vinci", "utopia201");
+WiFi.begin("nome_wi-fi", "senha");
 
 
 //Enquanto o ESP não se conectar à rede
@@ -33,8 +33,8 @@ Serial.print(".");
 //Conectou à rede,
 //Exibição da conexão no monitor serial Serial.println(""); Serial.println("Conectou");
 
-//Configurações do IP fixo. IPAddress ip(192,168,1,116);
-IPAddress gateway(192,168,1,1); IPAddress subnet(255,255,255,0); Serial.print("Configurando IP fixo para : "); Serial.println(ip);
+//Configurações do IP fixo. IPAddress ip(IP_FIXO);
+IPAddress gateway('IP'); IPAddress subnet('mácara de rede'); Serial.print("Configurando IP fixo para : "); Serial.println(ip);
 
 //Envia a configuração WiFi.config(ip, gateway, subnet);
 
